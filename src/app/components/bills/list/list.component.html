@@ -17,8 +17,10 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between" *ngFor="let expense of billsList">
                 <strong>{{ expense.name }}</strong>
-                <span class="badge rounded-pill bg-secondary">{{ expense.quantity }}</span>
+                <span class="badge rounded-pill bg-secondary">{{ expense.quantity }}€</span>
+                <span><img src="https://icones.pro/wp-content/uploads/2021/08/icone-x-avec-cercle-rouge.png" alt="deleteBill" (click)="deleteBill(expense)"></span>
             </li>
+            
         </ul>
     </div>
 </div>

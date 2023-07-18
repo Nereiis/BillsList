@@ -41,4 +41,17 @@ export class ListComponent implements OnInit, OnDestroy{
       return 'alert alert-secondary';
     }
   }
+
+  deleteBill(expense: any) {
+
+    const index = this.billsList.indexOf(expense);
+  
+    if (index !== -1) {
+      const deletedAmount = this.billsList[index].quantity;
+  
+      this.rest += deletedAmount;
+  
+      this.billsList.splice(index, 1);
+    }
+  }
 }
